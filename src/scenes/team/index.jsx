@@ -1,11 +1,11 @@
 import { Box, Typography, Button, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { tokens } from "../../theme";
+import { tokens } from "../../theme.js";
 import { mockDataExams } from "../../data/mockData.js"; 
 import AddIcon from "@mui/icons-material/Add";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import Header from "../../components/Header";
+import Header from "../../components/Header.jsx";
 import { useNavigate } from "react-router-dom";
 
 const ExamPlanning = () => {

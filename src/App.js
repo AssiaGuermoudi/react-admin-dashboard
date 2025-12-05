@@ -5,11 +5,12 @@ import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 import AjouterExamen from "./scenes/add-exam";
-import Form from "./scenes/form";
-import FAQ from "./scenes/faq";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import Calendar from "./scenes/calendar/calendar";
+
+// 🔵 NOUVELLES PAGES
+import ListeEnseignants from "./scenes/ens/listEnseignant";
+import AjouterEnseignant from "./scenes/ens/ajouterEnseignant";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -25,11 +26,12 @@ function App() {
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/team" element={<Team />} />  {/* Remis */}
-              <Route path="/form" element={<Form />} />
+              <Route path="/enseignants" element={<ListeEnseignants />} />
+              <Route path="/ajouterEnseignant" element={<AjouterEnseignant />} />
+              <Route path="/team" element={<Team />} />
+              
               <Route path="/ajouter-examen" element={<AjouterExamen />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/calendar" element={<Calendar />} />
+              
             </Routes>
           </main>
         </div>
